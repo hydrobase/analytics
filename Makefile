@@ -1,0 +1,2 @@
+coverage:
+	echo "for coverage"
