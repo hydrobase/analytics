@@ -1,2 +1,2 @@
 coverage:
-	echo "for coverage"
+	nosetests code/ --with-coverage
