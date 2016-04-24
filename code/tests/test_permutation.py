@@ -21,6 +21,7 @@ class PermutationTest(unittest.TestCase):
         c = np.random.normal(loc=5, size=N-m)
         arr = np.append(t, c)
         self.assertEquals(0.0, pt(arr, m))
+        self.assertEquals(0.0, pt(arr, m, two_tailed=False))
 
     def test_p_value_one(self):
         N, m = 10, 5
