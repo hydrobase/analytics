@@ -2,10 +2,17 @@ import unittest
 
 import numpy as np
 
-from code.permutation import pt
+from code.permutation import _test_statistic, pt
 
 
 class PermutationTest(unittest.TestCase):
+
+    def test_statistic_one(self):
+        m = 3
+        a = np.ones(m)
+        b = np.zeros(m)
+        arr = np.append(a, b)
+        self.assertEquals(1.0, _test_statistic(arr, m))
 
     def test_p_value_zero(self):
         np.random.seed(42)
